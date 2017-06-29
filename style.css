@@ -1,0 +1,227 @@
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+/* FOR ALL */
+
+body {
+	margin: 0;
+}
+.container {
+	border: 0.1px solid white;
+	background-color: #161F31;
+}
+
+/* NAV */
+
+nav {
+	height: 150px;
+	width: 100%;
+}
+.logo {
+	display: inline-block;
+	height: 100px;
+	width: 250px;
+	margin: 25px 0 25px 5%;
+	float: left;
+}
+.logo p {
+	color: #161F31;
+	line-height: 100px;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+li {
+	border: 1px solid white;
+	height: 88px;
+	width: 108px;
+	display: inline-block;
+	float: left;
+	margin: 30px 15px;
+}
+li:last-of-type {
+	margin-right: 30px;
+}
+li:hover {
+	background-color: #161F31;
+}
+li a {
+	text-decoration: none;
+	color: #161F31;
+	line-height: 90px;
+	font-size: 24px;
+	font-weight: bold; 
+}
+li:hover a {
+	color: white;
+}
+nav,
+.logo,
+li {
+	background-color: white;
+}
+.logo,
+.logo p,
+li {
+	text-align: center;
+}
+
+/* CONTENT */
+
+header,
+.gallery,
+.map 
+footer {
+	background-color: white;
+}
+.jambotron {
+	width: 90%;
+	height: 100vh;
+	margin: 25px 5%;
+	background-image: url("https://static.pexels.com/photos/8791/food-wood-coffee-cup-large.jpg");
+}
+.gallery {
+	margin: 0;
+	width: 100%;
+}
+[class*="photo-"] {
+	background-color: #00eaca;
+	height: 300px;
+	width: 25%;
+	display: inline-block;
+	float: left;
+	margin: 25px 7.5% 25px 0;
+}
+.photo-1 {
+	background-image: url("https://static.pexels.com/photos/6203/food-sweet-cake-candles-6203-large.jpg");
+	margin-left: 5%;
+}
+.photo-2 {
+	background-image: url("https://static.pexels.com/photos/132694/pexels-photo-132694-large.jpeg");
+}
+.photo-3 {
+	background-image: url("https://static.pexels.com/photos/24553/pexels-photo-24553-large.jpg");	
+	margin-right: 0;
+}
+.jambotron,
+[class*="photo-"] {
+	background-size: cover;
+	background-position: top;
+}
+
+/* FOOTER */
+
+footer p {
+	width: 100%;
+	height: 60px;
+	font-size: 18px;
+	line-height: 60px;
+	text-align: center;
+	margin: 0;
+	color: white;
+}
+
+/* RESPONSIVE PART */
+
+@media (max-width: 767px) {
+	.container {
+		width: 100%;
+	}
+	nav {
+		height: auto;
+		text-align: center;
+	}
+	.logo {
+		float: none;
+		text-align: center;
+		height: 100px;
+		width: 40%;
+		margin: 20px 30% 10px 30%;
+	}
+	.logo p {
+		font-size: 35px;
+	}
+	ul {
+		float: none;
+	}
+	li {
+		float: none;
+		display: block;
+		text-align: center;
+		height: 70px;
+		width: 80%;
+		margin: 15px 10%;
+	}
+	li:hover {
+		height: 70px;
+		width: 80%;
+	}
+	li a {
+		line-height: 70px;
+	}
+	.jambotron {
+		width: 100%;
+		height: 70vw;
+		margin: 25px 0;
+	}
+	[class*="photo-"] {
+		float: none;
+		display: block;
+		width: 80%;
+		margin: 30px 10%;
+	}
+	.gallery {
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.logo {
+		width: 44%;
+		margin: 20px 28% 10px 28%;
+	}
+	.logo p {
+		font-size: 28px;
+	}
+}	
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.container {
+		width: 100%;
+	}
+	.jambotron {
+		width: 100%;
+		margin: 25px 0;
+	}
+	.map img {
+		width: 100%;
+		margin: 25px 0;
+	}
+	[class*="photo-"] {
+		width: 30%;
+		margin: 25px 2.5% 25px 0;
+	}
+	.photo-1 {
+		margin-left: 2.5%;
+	}
+	.photo-3 {
+		margin-right: 0;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}
